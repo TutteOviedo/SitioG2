@@ -70,35 +70,101 @@ footer {
 .logoContainer {
     display: flex;
     justify-content: flex-end;
-    align-items: center; /* Centra verticalmente los logotipos */
+    align-items: center; 
 }
 
 .logo {
     width: 53px;
-    margin-left: 10px; /* Añade un margen entre los logotipos si es necesario */
+    margin-left: 10px; /
 }
 
-.conteinerCards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
 
-}
+/* Vista mobile - Roster */
+@media (max-width: 768px) {
+    .conteinerCards {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
 
-.cards {
-    flex: 1;
-    min-width: 20px;
-    margin-bottom: 20px; 
-}
-
-@media (max-width: 767px) {
     .cards {
-        flex: 0 0 50%; 
-        margin-bottom: 20px; 
+        width: 40%;
+        margin: 10px auto; 
     }
 }
+
+  /* Vista de escritorio - Roster*/
+@media (min-width: 769px) {
+    .conteinerCards {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .cards {
+        width: auto; 
+        margin: 10px;
+    }
+}
+
+
+/* Estilos para vista Mobile */
+@media (max-width: 768px) {
+    .galeriaConteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .galeriaElementos {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px 0;
+    }
+
+
+    .galeriaElementos iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .galeriaElementos img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+}
+
+/* Estilos para vista Desktop */
+@media (min-width: 769px) {
+    .galeriaConteiner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        max-width: 800px; 
+        margin: 0 auto;
+    }
+
+    .galeriaElementos {
+        max-width: 100%;
+    }
+
+
+    .galeriaElementos iframe {
+        width: 100%;
+        height: 300px; 
+    }
+
+    .galeriaElementos img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
 .historia
 {
     display: flex;
