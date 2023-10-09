@@ -108,7 +108,7 @@ footer {
 }
 
 
-/* Estilos para vista Mobile */
+/* Estilos Mobile Galeria */
 @media (max-width: 768px) {
     .galeriaConteiner {
         display: flex;
@@ -137,14 +137,14 @@ footer {
     }
 }
 
-/* Estilos para vista Desktop */
+/* Estilos Desktop Galeria */
 @media (min-width: 769px) {
     .galeriaConteiner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
         justify-content: center;
-        max-width: 800px; 
+        max-width: 1200px; 
         margin: 0 auto;
     }
 
