@@ -1,0 +1,224 @@
+@import 'variables';
+@import 'mixins';
+
+// Estilos globales
+* {
+    margin: 0;
+    padding: 0;
+}
+
+%parrafosComunes {
+    font-family: $font-secondary; 
+    color: $color-secondary;
+}
+
+// Estilos para los elementos de la barra de navegación
+.navbar-nav {
+    .nav-item {
+        margin-right: 10px; 
+        .nav-link {
+            color: $color-primary; 
+            font-weight: normal; 
+            transition: color 0.3s, font-weight 0.3s; 
+            @include hover-negrita; 
+        }
+    }
+}
+
+// Contenido principal del sitio
+main {
+    background-image: url("../assets/fondo.png");
+    background-repeat: repeat;
+}
+
+h1 {
+    font-family: $font-secondary; 
+    font-size: xx-large;
+    font-style: italic;
+}
+
+.seccionPrincipal {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        font-family: $font-primary; 
+        color: $color-secondary;
+    }
+
+    p {
+        @extend %parrafosComunes;
+        font-style: italic;
+    }
+}
+
+// Estilos del footer
+footer {
+    background-color: black;
+    padding-right: 10px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .logo {
+        width: 53px;
+        margin-left: 10px;
+    }
+}
+
+// Estilos roster
+@media (max-width: 768px) {
+    .conteinerCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .cards {
+            width: 40%;
+            margin: 10px auto;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .conteinerCards {
+        display: flex;
+        justify-content: center;
+
+        .cards {
+            width: auto;
+            margin: 10px;
+        }
+    }
+}
+
+// Estilos de la galeria
+@media (max-width: 768px) {
+    .galeriaConteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .galeriaElementos {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .galeriaConteiner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .galeriaElementos {
+            max-width: 100%;
+
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+//Estilos Historia y palmares
+
+.historia {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        @extend %parrafosComunes;
+        margin-left: 15px;
+        font-size: 200%;
+        font-style: oblique;
+    }
+}
+
+.titulos {
+    ul {
+        column-count: 2;
+        column-gap: 30px;
+        padding-left: 15;
+        list-style: none;
+        @extend %parrafosComunes;
+    }
+
+    img {
+        width: 150px;
+    }
+}
+
+// Estilos Calendario
+
+.calendario {
+    background-color: rgb(11, 1, 1);
+
+    li {
+        list-style: none;
+        color: white;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+
+// Estilos formulario
+
+.formulario {
+    background-color: #fa5555fd; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #333; 
+        color: #fff; 
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

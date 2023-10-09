@@ -1,0 +1,13 @@
+@mixin boton-estilo {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+@mixin hover-negrita {
+  &:hover {
+    font-weight: bold;
+  }
+}
